@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.5"
+    client="site">
+    <name>MOD_CALCULATOR_TITLE</name>
+    <author>Ilya Logvenkov</author>
+    <creationDate>May 2016</creationDate>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>sandrozz@yandex.ru</authorEmail>
+    <authorUrl>createyourway.ru</authorUrl>
+    <version>3.0.0</version>
+    <description>MOD_CALCULATOR_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_calculator">mod_calculator.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="ru-RU">ru-RU.mod_calculator.ini</language>
+        <language tag="ru-RU">ru-RU.mod_calculator.sys.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="email" type="email"
+                        label="JGLOBAL_EMAIL"
+                        description="COM_ADMIN_USER_FIELD_EMAIL_DESC"
+                        required="true"
+                        size="30"
+                        class="inputbox"
+                        validate="email" />
+                <field name="title" type="text" default="" label="Form title" description="" size="30" />
+                <field name="success_message" type="text" default="" label="Success message" description="" size="300" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
